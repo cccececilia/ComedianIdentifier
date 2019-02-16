@@ -17,7 +17,7 @@ def tokenize_raw_data(raw_data):
     return tokenized
 
 #the program starts here
-with open('textfiles/Final CSV  - Sheet1.csv') as file:
+with open(';/⁨Users⁩/cecilia⁩/⁨Cecilia⁩/大一啦⁩/VIPHumorG⁩/⁨FindC⁩/⁨ComedianIdentifier/⁩textfiles/Final CSV  - Sheet1.csv') as file:
         print('\n\n')
         reader = csv.reader(file, delimiter=',')
         line = 0
