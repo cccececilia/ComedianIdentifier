@@ -6,6 +6,7 @@ from string import punctuation
 import random
 from nltk.corpus import brown
 import math
+from operator import itemgetter
 
 data = []
 stop_words = set(stopwords.words('english')) #All meaningless words such as 'to', 'at'...
@@ -87,9 +88,12 @@ for counter in range(500):  #train and test 100 times
     #   if feat[1]:
     #       feature.add(feat[0])
     total += (nltk.classify.accuracy(classifier, testing_set))*100 #get percentage
+#    accuracy_set = []
+#    for word_occur in feature_sets
+#        accuracy_set.append(
 print("Classifier accuracy percent:", total/500, '\n')
-#cm = nltk.ConfusionMatrix(testing_set, nltk.classify.accuracy(classifier, testing_set))
-#print(cm.pretty_format(sort_by_count=True, show_percents=True, truncate=9))
+cm = nltk.ConfusionMatrix(classifier, i[3])
+print(cm.pretty_format(sort_by_count=True, show_percents=True, truncate=9))
 #print("most informative features", feature)
 #print(common_suffixes)
 #print (classifier.classify(pos_features('')))
